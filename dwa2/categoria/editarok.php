@@ -2,15 +2,14 @@
      
 
 
-   include_once '../class/adm.class.php';
+   include_once '../class/categoria.class.php';
    
-   $objadm = new adm();
-   $objadm->nome = $_POST["nome"];
-   $objadm->email = $_POST["email"];
-   $objadm->senha = $_POST["senha"];
-   $objadm->id_admis =$_POST["idee"];
+   $objcat = new cat();
+   $objcat->nome = $_POST["nome"];
+  
+   $objcat->id_cate =$_POST["idee"];
    
-   $retorno = $objadm->editar();
+   $retorno = $objcat->editar();
    
    if($retorno) {
    
