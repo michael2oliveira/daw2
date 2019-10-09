@@ -1,13 +1,13 @@
 <?php 
    
      
-     include_once '../class/adm.class.php';
+     include_once '../class/categoria.class.php';
 	 
 	
 	 
-	   $objadm = new adm();
+	   $objcat = new cat();
 	 
-              $listar= $objadm-> listar();	 
+              $listar= $objcat-> listar();	 
 			  
 			  
 			  
@@ -23,9 +23,7 @@
 	        
 	            <th> NOME: </th>
                 
-                <th> EMAIL: </th>
-                				
-	            <th> SENHA: </th>
+            
 				 
 				
 				 
@@ -46,22 +44,19 @@
               		
 			     echo "<tr>";
 			      
-				 echo "<td>" .$linha->id_admis."</td>";
+				 echo "<td>" .$linha->id_cate."</td>";
 				  
 	             echo "<td>".$linha->nome ."</td>";
 				 
 				 
-				 echo "<td>" .$linha->email."</td>";
 				 
-			     
-			     echo "<td>" .$linha->senha."</td>";
                 
 			
 				 
 				 
-				 echo "<td><a href='editar.php?id_admis=".$linha->id_admis."'>Editar</a></td>";
+				 echo "<td><a href='editar.php?id_cate=".$linha->id_cate."'>Editar</a></td>";
 				 
-				 echo "<td><a href='excluir.php?id_admis=".$linha->id_admis."'>Excluir</a></td>";
+				 echo "<td><a href='excluir.php?id_cate=".$linha->id_cate."'>Excluir</a></td>";
 				 
 		
 			   
@@ -81,5 +76,7 @@
 		  
 		  </table>  <?php 
 		                      
-		              ?>
+		              ?> 
+		  
+		  
 		  
