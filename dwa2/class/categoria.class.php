@@ -36,7 +36,8 @@
 	      $this->$nome = $value ;
 	    }
         
-		  public function add() {
+		
+	     public function add() {
 			
 	      $sql= "INSERT INTO $this->tabela(nome) VALUES ('$this->nome')";
 		  
@@ -56,9 +57,9 @@
 			
 			while ($res = mysqli_fetch_assoc($resultado) ) {
 				
-			  $objadm = new cat ();
+			  $objcat = new cat ();
 			  
-		      $objcat->id_admis= $res ['id_cate'];
+		      $objcat->id_cate= $res ['id_cate'];
 			  
 	          $objcat->nome = $res ['nome'];
 			  
@@ -80,19 +81,18 @@
 			
 	         public function retornaUnico(){
 				 
-	         $sql=  "SELECT * FROM $this->tabela where id_admis=$this->id_admis";
+	         $sql=  "SELECT * FROM $this->tabela where id_cate=$this->id_cate";
 			   
 			   $resultado = mysqli_query($this->conexao, $sql);
 			   $retorno = null;
 			   
 			   if($res = mysqli_fetch_assoc($resultado)) {
 				   
-				   $objadm = new adm();
-				   $objadm->nome = $res['nome'];
-				   $objadm->id_admis = $res['id_admis'];
-				   $objadm->email = $res ['email'];
-				   $objadm->senha = $res ['senha'];
-				   $retorno = $objadm;
+				   $objcat= new cat();
+				   $objcat->nome = $res['nome'];
+				   $objcat->id_cate = $res['id_cate'];
+				  
+				   $retorno = $objcat;
 				   
 			   
 			   
@@ -104,7 +104,7 @@
 		}
 			  public function editar() {
 
-               $sql = "UPDATE $this->tabela  SET nome = '$this->nome' , email = '$this->email' , senha = $this->senha  WHERE id_admis = $this->id_admis";
+               $sql = "UPDATE $this->tabela  SET nome = '$this->nome'   WHERE id_cate = $this->id_cate";
 			//  echo $sql;
 			   $resultado = mysqli_query($this->conexao,$sql);
 			   
@@ -116,7 +116,7 @@
 		   
    		   public function excluir(){
 			   
-            $sql = "DELETE FROM $this->tabela WHERE id_admis = $this->id_admis";
+            $sql = "DELETE FROM $this->tabela WHERE id_cate = $this->id_cate";
             $resultado = mysqli_query($this->conexao, $sql);
             return $resultado;
               
@@ -126,28 +126,22 @@
 			
 			
               			   
-			   
-            public function login(){
-				 
-	         $sql="SELECT * FROM $this->tabela WHERE email='$this->email' and senha ='$this->senha' and tipo = 'administrador'";
-			   
-			   echo $sql;
-			   
-			   $resultado = mysqli_query($this->conexao,$sql);
-			   $retorno = null;
-			   
-			   if($res = mysqli_fetch_assoc($resultado)) {
-				   
-				   $objUsuario = new usuario();
-				   $objUsuario->id_usuario = $res['id_usuario'];
-				   $objUsuario->nome = $res['nome'];
-				   $retorno = $objUsuario;
-			   
-			   
-			   } return $retorno;
+		
      			
 		
 	} 
+	
+              
+          
+			
+			
+			
+			
+              			   
+			   
+         
+		
+	 
 	
 }
 	
