@@ -2,7 +2,7 @@
  
  class cat { 
 	     
-		 private $id_admis;
+		 private $id_cate;
 		 private $nome;
 		
 		
