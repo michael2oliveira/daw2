@@ -1,15 +1,15 @@
 <?php 
    
 
-     include_once '../class/adm.class.php';
+     include_once '../class/categoria.class.php';
 	 
 	 
 	 
-	 $objadm = new adm();
+	 $objcat = new cat();
 	 
-	 $objadm-> id_admis = $_GET['id_admis'];
+	 $objcat-> id_cate = $_GET['id_cate'];
 	 
-	 $retorno = $objadm->excluir();
+	 $retorno = $objcat->excluir();
 	 
 	 if ($retorno ){ 
 	 
