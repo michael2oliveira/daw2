@@ -1,0 +1,118 @@
+
+
+#mainNav{
+
+     background-color: black;
+}
+
+.py-5 {
+     background-color: black;
+     
+
+}
+
+input{
+     border-style: solid;
+     border-radius: 4px;
+     border-color: black;
+}
+form{
+    
+  
+     margin-left: 21%;
+     margin-top: 54px;
+}
+
+
+h2{
+     text-align: center;
+     margin-top:  -59% ;
+}
+
+input[type=submit]{
+    margin-left:31%;
+    background-color: gray;
+}
+
+h1{
+     margin-top: -5%;
+     margin-left: 30%;
+   
+}    
+
+
+table{
+     border-collapse:separate;
+     margin-left: 20%;
+     margin-top: 11%;
+     border-style: groove;
+
+      
+}
+
+#about{
+
+     padding:300px;
+}
+
+#lis{
+
+  position: relative;
+
+}
+
+footer{
+
+  background-color: black;
+
+}
+
+
+
+
+#foto{
+   
+     margin-left: 26%;
+
+
+}
+
+
+
+
+header{
+
+  
+  background-image: url("./foto/img3.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+ 
+  padding: 648px 0 100px;
+}
+
+.bg-primary text-white{
+
+     height: 30%;
+}
+
+#pl {
+
+     margin-top: 10%;
+}
+
+
+legend{
+
+text-align: center;
+
+}
+
+#fm{
+
+      margin-left: 30%;
+}
+
+#sb{
+
+     margin-left: 184%;
+}
